@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Testside</title>
+    <script>
+
+    window.onload = oppstart;
+
+    function oppstart() {
+        document.getElementById("leggtil").onclick = leggtil;
+    }
+
+    function leggtil() {
+        var tid = new Date();
+        var nyttElement = document.createElement("li");
+        
+        nyttElement.innerHTML = tid.getHours() + ":" + tid.getMinutes() + ":" + tid.getSeconds();
+
+        document.getElementById("tider").appendChild(nyttElement);
+    }
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Rundetider</h1>
+    <p id="leggtil">Legg til ny tid</p>
+    <h3>Tider:</h3>
+    <ol id="tider">
+    </ol>
+</body>
+</html>

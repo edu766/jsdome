@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Testside</title>
+    <script>
+
+    window.onload = oppstart;
+
+    function oppstart() {
+        document.getElementById("txtMelding").onchange = tellTegn;
+    }
+
+    function tellTegn() {
+        document.getElementById("antTegn").innerHTML = 140 - document.getElementById("txtMelding").value.length;
+    }
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <input type="text" id="txtMelding" maxlength="140" />
+    <p>Antall tegn igjen: <span id="antTegn">140</span></p>
+</body>
+</html>
